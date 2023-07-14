@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: linear-gradient(70deg, rgb(71, 11, 11), rgb(6, 56, 32));
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* heading of the HTML Document */
+#heading{
+    font-size: 1.4rem;
+    font-style: bold;
+    color:rgb(235, 14, 14);
+    margin: 1rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* form of the HTML document */
+form{
+    width: 80%;
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#todo-title-input{
+    background-color: rgb(13, 237, 218);
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    padding-left: 1.2rem;
+    padding-right: 2.5rem;
+}
+#todo-add-btn{
+    position: absolute;
+    right: 0;
+    background-color: red ;
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+#todo-add-btn:hover{
+    transform: rotateX('30');
+    color: rgb(1, 125, 1);
+    background-color: rgb(125, 7, 7);
+}
+
+/* Styling the todo list item */
+#todo-list-container{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 2rem;
+}
+#todo-list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+.todo-list-item{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgb(10, 244, 80);
+    padding: .5rem;
+    margin: 2px 0;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+ .todo-list-item:hover{
+    background-color: rgb(51, 127, 7);
+    transform:scaleX(2rem);
+
+}
+.todo-list-title{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    width: 100%;
+    min-width: 0;
+    word-wrap: break-word;
+}
+
+/* list button */
+.list-btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 6rem;
+    height: 1.4rem;
+}
+.list-btns button{
+    background-color: rgba(218, 27, 27, 0);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    width: 1.6rem;
+}
+.list-btns .update-btn{
+    display: none;
+}
+.list-btns button .fa{
+    font-size: 1.2rem;
+    pointer-events: none;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.fa-edit{
+    color: rgb(29, 5, 150);
+}
+.fa-save{
+    color: grey;
+}
+.fa-check{
+    color: rgb(3, 69, 3);
+}
+.fa-trash{
+    color: rgb(161, 1, 1);
+}
+.list-btns button:hover .fa{
+    opacity: 0.4;
+}
+.done{
+    text-decoration: line-through;
+}
+.done-assistance{
+    background-color: rgb(230, 230, 230, 0.5);
+}
+
+/* message alert for the document */
+.message{
+    position: fixed;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(92, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    top: 8%;
+    right: 50%;
+    transform: translate(50%,0);
+    z-index: 5;
+    opacity: 0;
+    text-align: center;
+}
+#start-editing{
+    background-color: rgb(210, 232, 13);
+    border: solid 1px rgb(255, 217, 0);
+}
+#deleted{
+    background-color: rgb(232, 26, 26);
+    border: solid 1px rgb(119, 31, 31);
+    color: white;
+}
+#saved{
+    background-color: rgb(83, 248, 83);
+    border: solid 1px green;
+}
